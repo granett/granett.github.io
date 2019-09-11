@@ -84,7 +84,7 @@ index.number_of_replicas是索引的副本数，也就是索引的分片副本�
 >1.每个副本都会把当前的分片全部复制一份并平均分布到集群节点上
 2.当副本数3时，由于此时每台机器都已经占满自己的3个分片了，所以此时需要增加新的机器来存放第三个副本，所以提示了Unassigned？
 
-#### 高可用原理
+### 高可用原理
 我们以3机器3分片2副本为例：
 ![QQ图片20180613182349.png](https://upload-images.jianshu.io/upload_images/6073827-b0f691a3366be417.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
