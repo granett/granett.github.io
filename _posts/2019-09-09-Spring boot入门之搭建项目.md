@@ -5,14 +5,14 @@ date: 2019-09-09
 tag: 框架
 ---   
 
-#### 什么是Spring boot？
+#### **什么是Spring boot？**
 从最根本上来讲，Spring Boot就是一些框架和配置的集合，就比如**Spring相当于把各种类型的bean组织在一起一样，Spring boot就是把各种框架和各种配置整合在了一起，比如Spring、Spring MVC还有redis、mongo等，**它能够被任意项目的构建系统所使用。
 #### Spring boot的优点
->1.使用 Spring 项目引导页面可以在几秒构建一个项目
-2.集成了各种关系数据库和非关系数据库
-3.嵌入的Tomcat，无需部署WAR文件
-4.简化和自动配置Spring等各种框架
-5.很大程度上精简了复杂的XML配置
+>**1.使用 Spring 项目引导页面可以在几秒构建一个项目**
+>****2.集成了各种关系数据库和非关系数据库**
+>**3.嵌入的Tomcat，无需部署WAR文件**
+>**4.简化和自动配置Spring等各种框架**
+>**5.很大程度上精简了复杂的XML配置**
 #### 生成项目
 1.访问http://start.spring.io/，这里是Spring 项目引导页面
 2.选择构建工具Maven Project、Spring Boot版本以及输入项目的结构等
