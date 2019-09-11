@@ -7,12 +7,13 @@ tag: 框架
 
 ### **什么是Spring boot？**
 从最根本上来讲，Spring Boot就是一些框架和配置的集合，就比如**Spring相当于把各种类型的bean组织在一起一样，Spring boot就是把各种框架和各种配置整合在了一起，比如Spring、Spring MVC还有redis、mongo等，**它能够被任意项目的构建系统所使用。
-### Spring boot的优点
+### **Spring boot的优点**
 >**1.使用 Spring 项目引导页面可以在几秒构建一个项目**        
 >**2.集成了各种关系数据库和非关系数据库**        
 >**3.嵌入的Tomcat，无需部署WAR文件**        
 >**4.简化和自动配置Spring等各种框架**        
 >**5.很大程度上精简了复杂的XML配置**        
+
 
 ### **生成项目**
 1.访问http://start.spring.io/，这里是Spring 项目引导页面
@@ -49,8 +50,8 @@ public class HelloController {
 ```
 3.启动主程序，打开浏览器访问`http://localhost:8080/hello`，可以看到页面输出`Hello World`
 ### **注意点**
-**1.@RestController的意思就是该controller里面的方法都以json格式返回，不用再像SpringMVC里似的写@ResponseBody了。
-2.我们可以看到pom.xml里的依赖也都和Spring里的名字不同了，这也是Spring boot精简配置的体现之一。**
+**1.@RestController的意思就是该controller里面的方法都以json格式返回，不用再像SpringMVC里似的写@ResponseBody了。**        
+**2.我们可以看到pom.xml里的依赖也都和Spring里的名字不同了，这也是Spring boot精简配置的体现之一。**        
 **3.如果出现下图错误**
 ![QQ图片20180125115248.png](/images/3.jpg)
 Spring Boot默认使用嵌入式Tomcat，默认没有页面来处理404等常见错误。**因此，为了给用户最佳的使用体验，404等常见错误需要我们自定义页面来处理，错误页面需要放在Spring Boot web应用的static内容目录下，它的默认位置是：src/main/resources/static，如下图所示：**
