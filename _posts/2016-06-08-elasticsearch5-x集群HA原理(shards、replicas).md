@@ -7,18 +7,18 @@ tag: 工具1
 
 最近在搭建es5.2的高可用集群，在这个过程中加深了对es的原理理解，基本分为四个阶段
 es单机—>es集群（多台机器）—>es分片和副本集分布原理—>es高可用集群
-####1.es单机
+#### 1.es单机
 在第一个阶段基本概念的掌握还是比较熟练的，对应着关系型数据库（mysql）来理解es：
-######文档（document）
+###### 文档（document）
 文档（document）是ElasticSearch中的存储形式。对所有使用ElasticSearch的案例来说，他们最终都可以归结为对文档的搜索，一个文档相当于mysql里的一条数据
-######索引（index）
+###### 索引（index）
 ElasticSearch将它的数据存储在一个或多个索引（index）中。索引就像数据库，可以向索引写入文档或者从索引中读取文档
-######类型（type）
+###### 类型（type）
 每个文档都有与之对应的类型（type）定义。这允许用户在一个索引中存储多种文档类型，比如在“资料”索引下，有pdf类型和word类型，并为不同文档提供类型提供不同的映射
-######映射（mapping）
+###### 映射（mapping）
 所有文档写进索引之前都会先进行分析，如何将输入的文本分割为词条、哪些词条又会被过滤，这种行为叫做映射（mapping）。一般由用户自己定义规则，可以理解为pdf类型的文档的映射就是pdf含有的字段
 
-####2.es集群
+#### 2.es集群
 es集群是通过多台服务器来搭建，它们拥有一个共同的clustername比如叫做“escluster”，每台服务器叫做一个节点，拥有自己的节点名字：nodename，配置文件如下：
 ```
 集群名称，用于定义哪些elasticsearch节点属同一个集群。
@@ -45,9 +45,9 @@ client.prepareIndex("info", "info",UUID.randomUUID().toString())
 ```
 >es集群肯定效率各方面都要比单机强很多，但是如果集群中一台机器挂掉了，我们其余的几台会不会安然无恙？而数据会不会丢失？我们目前并不能保证，所以我们要配置一套高可用的集群
 
-####3.es分片和副本集分布原理
+#### 3.es分片和副本集分布原理
 配置一套高可用的集群，我们必须要了解es集群的数据分布和负载原理
-#####shards（分片）
+##### shards（分片）
 在配置文件里我们看到默认的shards是5个，**一个索引的全部数据会被分开存储在这几个分片上，**我们用3个分片来看下效果：
 
 **单机分片分布：**
@@ -71,7 +71,7 @@ client.prepareIndex("info", "info",UUID.randomUUID().toString())
 
 根据上面的总结，**es集群无法避免机器挂掉后仍然能不丢数据的正常运行，解决办法是配置文件的另一个参数index.number_of_replicas来达到高可用目的**
 
-####es高可用集群
+#### es高可用集群
 index.number_of_replicas是索引的副本数，也就是索引的分片副本数，**我们通过3台机器3个分片的配置来看下效果**
 1个副本
 ![QQ图片20180613182349.png](https://upload-images.jianshu.io/upload_images/6073827-16b181faacb64725.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -84,7 +84,7 @@ index.number_of_replicas是索引的副本数，也就是索引的分片副本�
 >1.每个副本都会把当前的分片全部复制一份并平均分布到集群节点上
 2.当副本数3时，由于此时每台机器都已经占满自己的3个分片了，所以此时需要增加新的机器来存放第三个副本，所以提示了Unassigned？
 
-####高可用原理
+#### 高可用原理
 我们以3机器3分片2副本为例：
 ![QQ图片20180613182349.png](https://upload-images.jianshu.io/upload_images/6073827-b0f691a3366be417.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
