@@ -1,3 +1,11 @@
+---
+layout: post
+title: "ES"
+date: 2015-08-25 
+description: "HEXO配置，HEXO+Github，搭建自己的博客"
+tag: 博客 
+---   
+
 最近在搭建es5.2的高可用集群，在这个过程中加深了对es的原理理解，基本分为四个阶段
 es单机—>es集群（多台机器）—>es分片和副本集分布原理—>es高可用集群
 ####1.es单机
