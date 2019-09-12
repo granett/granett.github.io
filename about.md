@@ -9,6 +9,9 @@ title: 关于我
 <p>
 了解一些 前端 基本概念
 <p>
+目前正在进行架构师的技术体系学习，博客实时分享学习的进度。
+<p>
+<p>
 博客的所有源码在 <a target="_blank" href='https://github.com/granett'>Github</a> 上，你的 Star 是我更新的动力，谢谢~
 
 <p> 
