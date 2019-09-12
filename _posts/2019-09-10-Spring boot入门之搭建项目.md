@@ -16,7 +16,7 @@ tag: 框架
 
 
 ### **生成项目**
-1.访问http://start.spring.io/，这里是Spring 项目引导页面
+1.访问http://start.spring.io/，这里是Spring 项目引导页面           
 2.选择构建工具Maven Project、Spring Boot版本以及输入项目的结构等
 ![QQ图片20180125113718.png](/images/1.jpg)
 3.点击上图下方的`Switch to the full version`，**可以选择需要添加的数据库、框架等等。**
