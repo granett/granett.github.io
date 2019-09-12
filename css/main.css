@@ -120,7 +120,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2em; 
+  font-size: 1.4em; 
   text-indent: 4px; 
   border-radius: 4px; 
   padding: 6px 15px;
@@ -144,8 +144,9 @@ h5 {
 p {
   margin-bottom: 10px;
   margin-top: 5px;
-  line-height: 1.7em; 
+  line-height: 1.9em; 
   padding-left: 20px;
+  font-size:16px;
 }
 
 strong {
