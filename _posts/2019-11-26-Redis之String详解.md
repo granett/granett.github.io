@@ -5,12 +5,11 @@ date: 2019-09-22
 tag: Redis
 ---   
 
-##redis学习笔记
-###简介
+### 简介
 Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。
  它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。 
 Redis 内置了 复制（replication），LUA脚本（Lua scripting）， LRU驱动事件（LRU eviction），事务（transactions） 和不同级别的 磁盘持久化（persistence）， 并通过 Redis哨兵（Sentinel）和自动 分区（Cluster）提供高可用性（high availability）。
-###redis实例
+### redis实例
 ![01.png][1]
 
 redis是单线程、单进程、单实例的。一台服务器可以开启多个redis实例，通过端口区分。可以通过
@@ -27,7 +26,7 @@ redis-cli -n （0-16）
 select (0-16)
 ```
 来切换库
-###数据类型
+### 数据类型
 redis通过key-value的形式存放数据，value有String、List、hash、Set、sorted_set多种类型。其中key上面会保留一些属性，例如：
 1. type
 
@@ -46,7 +45,7 @@ redis通过key-value的形式存放数据，value有String、List、hash、Set�
     命令来获取。该方式可以加快处理速度，比如我的编码是embstr，当我执行累加操作的时候，发现不是int，就直接抛出异常， 
    不用再去判断value是否是数字了。每次执行成功执行string或int的操作之后，都会把编码保存在key中。
 
-####String类型
+### String类型
 ![02.png][2]
 
 String类型实际存储的是byte也就是字节，二进制安全，不涉及到编码问题。因为是byte所以redis的String实际上包含，字符串，数值，bitmap三种类型。
