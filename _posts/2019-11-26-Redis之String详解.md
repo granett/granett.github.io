@@ -155,8 +155,8 @@ bitmap应用场景
     BITCOUNT  destkey  0 -1 
     ```
 
-  [1]: https://www.princeleiblog.tk/usr/uploads/2019/11/3853555343.png
-  [2]: https://www.princeleiblog.tk/usr/uploads/2019/11/1924639956.png
+  [1]: /images/redis-string01.png
+  [2]: /images/redis-string01.png
 
 
 
