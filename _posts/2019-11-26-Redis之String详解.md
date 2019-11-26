@@ -109,12 +109,12 @@ setbit k1 9 1
 setbit k1 14 1
 get k1
 ```
-此时k1的所对应的二级制值为：0100 0001 0100 0010,输出的value就是"AB"
+此时k1的所对应的二级制值为：0100 0001 0100 0010,输出的value就是"AB"    
 统计某几个字节二进制位为1的数量
 ```
 bitcount key start end
 ```
-其中start，end为字节的序号
+其中start，end为字节的序号    
 寻找某个二进制位，第一个出现的位置
 ```
 bitpos key 1 [start] [end]
